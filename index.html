@@ -21,7 +21,6 @@
       display:flex; 
       justify-content: center;
       align-items: center;
-     
     }
     .box{
       border-radius:25px;
@@ -58,7 +57,7 @@
         visibility: visible;
         border: 1px solid hsl(212, 14%, 24%);
     } 
-    input[type='radio']:checked:after {
+    input[type='radio']:checked:after{
         width: 40px;
         height: 40px;
         border-radius: 20px;
@@ -140,17 +139,13 @@
   <script>
     function switchContent(id1,id2){
       document.getElementById(id1).style.display='none';
-      document.getElementById(id2).style.display='block';
+      document.getElementById(id2).style.display='flex';
     };
     function addRating(){
-      var radioEls=document.getElementsByTagName(input["rating"]);
-      var val=0;
-      for(var i = 0; i< radioEls.length; i++){
-        if(radioEls[i].checked){
-          val=radioEls[i].value;
-        }
-      }
-      console.log("hiii"+val);
+      var val=document.querySelector('input[name="rating"]:checked').value;
+      document.getElementById("rating").innerHTML=val;
+      switchContent("page1","page2");
+      return false;
     };
   </script>
 </head>
@@ -165,7 +160,7 @@
 
   <p>Please let us know how we did with your support request. All feedback is appreciated 
   to help us improve our offering!</p>
-    <form onsubmit="addRating();" id="myform">
+    <form onsubmit=" return addRating();" id="myform">
     <div id="radio">
       <label for="id1">1</label> 
     <input type="radio" value="1" name="rating" id="id1">
@@ -195,9 +190,7 @@
   You selected <span id="rating"></span> out of 5
 </div>
   </div>
-  <h1>
-  Thank you!
-  </h1>
+  <h1>Thank you!</h1>
   <p>
   We appreciate you taking the time to give a rating. If you ever need more support, 
   don't hesitate to get in touch!</p>
@@ -211,20 +204,8 @@
     Coded by <a href="#">Zeva</a>.
   </div>
   <script>
-    var hidden="page2"
-    var i =0 ;
-    var today= new Date();
-    var cur=today.getSeconds;
-    while(today.getSeconds-cur>2){
-    if(i%2===0){
-    document.getElementById(hidden).style.display='none';
-    }
-    else{
-    document.getElementById(hidden).style.display='inline-box';
-    }
-    i++;
-    cur=today.getSeconds();
-  }
+    var hidden="page2";
+    document.getElementById(hidden).style.display="none";
   </script>
 </body>
 </html>
