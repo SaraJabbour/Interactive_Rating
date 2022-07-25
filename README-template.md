@@ -10,7 +10,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
--[Links](#links)
+- [Links](#links)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
