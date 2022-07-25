@@ -10,7 +10,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-
+-[Links](#links)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -35,8 +35,6 @@ Once first page was done. Went to the 2nd thank you page. Once both were finishe
 - CSS custom properties
 - Flexbox
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 While this was a simple challenge, it was perfect for a beginner like me. 
@@ -50,3 +48,6 @@ Learned how to change the radio buttons appearance. But I haven't figured how to
 I'm still not confident in my CSS, i think i made too many classes that are too specific and can't be reused.
 
 My JS is also very basic, while trying to find answers i struggled with some of the syntax and couldn't understand it.
+
+### Links
+Live Solution: https://zeva02.github.io/Interactive_Rating/
