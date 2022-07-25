@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color:hsl(216, 12%, 8%);
+      color:white;
+      font-family:'Overpass';
+      font-size:15px;
+      font-weight:400;
+    }
+    .container{
+      height:100vh;
+      display:flex; 
+      justify-content: center;
+      align-items: center;
+     
+    }
+    .box{
+      border-radius:25px;
+      margin:0;
+      padding:20px 30px;
+      width:325px;
+      height:335px;
+      background-color:hsl(213, 19%, 18%);
+    }
+
+    .vertFlex{
+      display:flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      color:hsl(217, 12%, 63%);
+      margin-bottom: 3em;
+      margin-top: -1em;
+    }
+    input[type='radio']{
+      appearance:none;
+    }
+    input[type="radio"]:after{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: relative;
+        background-color:hsl(212, 14%, 24%);
+        content: '';
+        color: hsl(213, 19%, 18%);
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid hsl(212, 14%, 24%);
+    } 
+    input[type='radio']:checked:after {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: relative;
+        background-color: hsl(25, 97%, 53%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid hsl(25, 97%, 53%);
+    }
+    input[type='radio']:hover:after {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: relative;
+        background-color:  hsl(217, 12%, 63%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid  hsl(217, 12%, 63%);
+    }
+    #star_img{
+      position:absolute;
+      width:20px;
+      height:20px;
+      top:8px;
+      left:9px;
+    }
+    label{
+      position:relative;
+      bottom:15px;
+      left:33px;
+      z-index:1;
+      color:hsl(216, 12%, 54%);
+    }
+    #circle{
+      position:relative;
+      background-color:hsl(212, 14%, 24%);
+      width:40px;
+      height:40px;
+      border-radius: 50%;
+    }
+    .center{
+      margin-top:20px;
+      text-align:center;
+    }
+    input[type="submit"]{
+      width:300px;
+      height:35px;
+      border-radius: 15px;
+      background-color:hsl(25, 97%, 53%);
+      color:white;
+      border-color: hsl(25, 97%, 53%);
+      font-size:1.0em;
+      outline:none;
+
+    }
+    input[type="submit"]:hover{
+      background-color: white;
+      color:hsl(25, 97%, 53%);
+      border-color:white;
+      outline:none;
+    }
+    #th_im{
+      margin-top: 20px;
+    }
+
+    #select{
+      margin-top:30px;
+      border-radius:30px;
+      background-color: hsl(212, 14%, 24%);
+      color:hsl(25, 97%, 53%);
+      padding:4px 15px;
+
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script>
+    function switchContent(id1,id2){
+      document.getElementById(id1).style.display='none';
+      document.getElementById(id2).style.display='block';
+    };
+    function addRating(){
+      var radioEls=document.getElementsByTagName(input["rating"]);
+      var val=0;
+      for(var i = 0; i< radioEls.length; i++){
+        if(radioEls[i].checked){
+          val=radioEls[i].value;
+        }
+      }
+      console.log("hiii"+val);
+    };
+  </script>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div class="container" id ="page1">
+  <div class="box">
+    <div id="circle"><img id="star_img" src="images/icon-star.svg"></div>
+    
+  <h1>How did we do?</h1>
+
+  <p>Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p>
+    <form onsubmit="addRating();" id="myform">
+    <div id="radio">
+      <label for="id1">1</label> 
+    <input type="radio" value="1" name="rating" id="id1">
+    <label for="id2">2</label> 
+    <input type="radio" value="2" name="rating" id="id2">
+    <label for="id3">3</label>  
+    <input type="radio" value="3" name="rating" id="id3"> 
+    <label for="id4">4</label> 
+    <input type="radio" value="4" name="rating" id="id4"> 
+    <label for="id5" >5</label>
+    <input type="radio" value="5" name="rating" id="id5">
+    </div>
+    <div class="center">
+  <input type="submit" value="SUBMIT" >
+  </div>
+</form>
+</div>
+</div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+ <div class="container" id="page2">
+  <div class="box vertFlex">
+    <img id="th_im"src="images/illustration-thank-you.svg">
+  <div>  
+  <div id="select">
+  You selected <span id="rating"></span> out of 5
+</div>
+  </div>
+  <h1>
+  Thank you!
+  </h1>
+  <p>
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don't hesitate to get in touch!</p>
+  </div>
+</div>
+  <!-- Thank you state end -->
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zeva</a>.
+  </div>
+  <script>
+    var hidden="page2"
+    var i =0 ;
+    var today= new Date();
+    var cur=today.getSeconds;
+    while(today.getSeconds-cur>2){
+    if(i%2===0){
+    document.getElementById(hidden).style.display='none';
+    }
+    else{
+    document.getElementById(hidden).style.display='inline-box';
+    }
+    i++;
+    cur=today.getSeconds();
+  }
+  </script>
+</body>
+</html>
