@@ -6,15 +6,12 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -36,7 +33,9 @@ Users should be able to:
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
-
+I first started fixing the HTML code then went to start the first page of the rating. First designed the layout with flexbox to center the boxes.
+Worked on the star in the circle and afterwards tackled the radio buttons and their different states(not active, hover, clicked). Then finished the submit button.
+Once first page was done. Went to the 2nd thank you page. Once both were finished, i linked them together and added the JS code to hide one box and show another.
 ### Built with
 
 - Semantic HTML5 markup
