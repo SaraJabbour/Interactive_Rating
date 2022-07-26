@@ -37,7 +37,7 @@ Once first page was done. Went to the 2nd thank you page. Once both were finishe
 While this was a simple challenge, it was perfect for a beginner like me. 
 Learned how to manipulate displaying elements.
 Learned how to stop a default action (site refreshing once you submit a form).
-Learned how to change the radio buttons appearance. But I haven't figured how to change the color of the text in button to white. Will be giving a try in a bit.
+Learned how to change the radio buttons appearance.
 
 
 ### Continued development
