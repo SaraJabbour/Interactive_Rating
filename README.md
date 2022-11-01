@@ -47,4 +47,5 @@ I'm still not confident in my CSS, i think i made too many classes that are too 
 My JS is also very basic, while trying to find answers i struggled with some of the syntax and couldn't understand it.
 
 ### Links
-Live Solution: https://zeva02.github.io/Interactive_Rating/
+Live Solution: https://6360c96c3128c95560807a06--jolly-mousse-d7980b.netlify.app/
+
